@@ -15,7 +15,10 @@
     "dev:web": "turbo -F web dev"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.6",
     "dotenv": "^17.2.2",
+    "viem": "2.x",
+    "wagmi": "^2.19.2",
     "zod": "^4.1.11"
   },
   "devDependencies": {
