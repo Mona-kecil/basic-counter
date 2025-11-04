@@ -18,7 +18,7 @@ const WEB_DIR = join(ROOT_DIR, "apps/web");
 const CONTRACTS_TS = join(WEB_DIR, "src/lib/contracts.ts");
 const ENV_FILE = join(WEB_DIR, ".env");
 
-// Paths (relative to packages/smart-contract directory)
+// Paths (relative to packages/basic-counter directory)
 const ABI_SOURCE = join(CONTRACT_DIR, "out/Counter.sol/Counter.json");
 const BROADCAST_FILE = join(
   CONTRACT_DIR,

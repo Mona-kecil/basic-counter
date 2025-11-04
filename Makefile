@@ -27,9 +27,9 @@ setup-wallet:
 			echo "❌ No address provided. Using default Anvil account."; \
 		else \
 			echo "💰 Funding your wallet..."; \
-			cd packages/smart-contract && $(MAKE) fund-wallet-address ADDRESS=$$USER_ADDRESS || exit 1; \
+			cd packages/basic-counter && $(MAKE) fund-wallet-address ADDRESS=$$USER_ADDRESS || exit 1; \
 			echo ""; \
-			echo "⚠️  IMPORTANT: To use your wallet for deployment, add this to packages/smart-contract/.env:"; \
+			echo "⚠️  IMPORTANT: To use your wallet for deployment, add this to packages/basic-counter/.env:"; \
 			echo "   ANVIL_PRIVATE_KEY=your_private_key_here"; \
 			echo ""; \
 			read -p "Press Enter to continue..."; \
@@ -45,17 +45,17 @@ install-deps:
 
 compile:
 	@echo "🔨 Compiling smart contracts..."
-	@cd packages/smart-contract && forge build
+	@cd packages/basic-counter && forge build
 	@echo "✅ Smart contracts compiled"
 
 deploy-local:
 	@echo "🚀 Deploying contract to Anvil..."
-	@cd packages/smart-contract && $(MAKE) deploy-anvil
+	@cd packages/basic-counter && $(MAKE) deploy-anvil
 	@echo "✅ Contract deployed"
 
 update-contracts:
 	@echo "📝 Updating contracts.ts..."
-	@cd packages/smart-contract && $(MAKE) update-web-contracts
+	@cd packages/basic-counter && $(MAKE) update-web-contracts
 	@echo "✅ contracts.ts updated"
 
 check-anvil:

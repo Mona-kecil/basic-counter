@@ -33,7 +33,7 @@ This project was created with [Better-T-Stack](https://github.com/AmanVarshney01
    - When prompted, choose `y` to use your own wallet
    - Enter your wallet address (0x...)
    - Your wallet will be automatically funded with 99999 ETH from Anvil's default account
-   - To deploy with your wallet, add your private key to `packages/smart-contract/.env`:
+   - To deploy with your wallet, add your private key to `packages/basic-counter/.env`:
      ```
      ANVIL_PRIVATE_KEY=your_private_key_here
      ```
@@ -73,9 +73,9 @@ If you prefer to set up manually:
 
 1. `anvil`
 2. transfer funds to the address you want to be the owner of the contract
-3. `cd packages/smart-contract && make deploy-anvil`
+3. `cd packages/basic-counter && make deploy-anvil`
 4. Get contract address from stdout
-5. Get abi from `packages/smart-contract/out/Counter.sol/Counter.json`
+5. Get abi from `packages/basic-counter/out/Counter.sol/Counter.json`
 6. Set the contract address in `apps/web/.env`
 7. Set the abi in `apps/web/src/lib/contracts.ts`
 8. Run the development server from root directory: `bun run dev`
